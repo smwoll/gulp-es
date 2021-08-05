@@ -1,0 +1,23 @@
+{
+  "name": "gulp-es",
+  "version": "1.0.0",
+  "description": "testing gulp and esbuild combo",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild-plugin-sass": "^0.5.2",
+    "gulp": "^4.0.2",
+    "gulp-esbuild": "^0.8.5",
+    "gulp-eslint": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "prettier": "2.3.2"
+  }
+}

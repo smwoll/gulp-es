@@ -1,0 +1,24 @@
+html {
+  background: lightsteelblue;
+}
+.test .subtest {
+  color: blue;
+}
+.test .subtest .subsubtest {
+  font-size: 4rem;
+}
+.panels .panel {
+  background-color: pink;
+  width: 80%;
+  min-height: 40vh;
+  margin: 40px auto;
+}
+.panels .panel:first-child {
+  background-color: purple;
+}
+.panels .panel:nth-child(2) {
+  background-color: orange;
+}
+.panels .panel:nth-child(3) {
+  background-color: green;
+}
