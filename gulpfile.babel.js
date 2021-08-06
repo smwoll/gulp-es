@@ -1,6 +1,10 @@
+import gulp from 'gulp';
+import { sassPlugin } from 'esbuild-sass-plugin';
+
 const { src, dest, watch } = require('gulp');
 // esbuild sass plugin
-const sassPlugin = require('esbuild-plugin-sass');
+
+// const sassPlugin = require('esbuild-sass-plugin');
 
 // cache map
 const pluginCache = new Map();
@@ -24,10 +28,16 @@ function build() {
 }
 
 function buildStyles() {
-  return src('src/scss/*')
+  return src('src/scss/main.scss')
     .pipe(
       gulpEsbuild({
-        plugins: [sassPlugin({ cache: pluginCache })],
+        plugins: [
+          sassPlugin({
+            // cache: pluginCache,
+            file: 'main.scss',
+            includePaths: ['/src/scss'],
+          }),
+        ],
         loader: {
           '.scss': 'css',
         },
@@ -38,7 +48,7 @@ function buildStyles() {
 
 function watchTask() {
   watch(['src/js/*'], build);
-  watch(['src/scss/*'], buildStyles);
+  watch(['src/scss/**/*.scss'], buildStyles);
 }
 
 exports.build = build;
