@@ -5,7 +5,7 @@ Simple project to set up and test gulp + esbuild, with sass support.
 ## Install
 
 ```bash
-npm i esbuild esbuild-plugin-sass
+npm install
 ```
 
 ## Gulp Commands
